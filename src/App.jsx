@@ -40,6 +40,7 @@ function App() {
     <div className="app-container">
       <div className="header">
         <input type="text" value={searchText} onChange={handleSearch} placeholder="Search..." />
+ 
         <label>
           <input type="checkbox" checked={filterByCredit} onChange={handleFilterByCredit} />
           Filter by Paid
@@ -50,6 +51,7 @@ function App() {
       <table className="styled-table">
         <thead>
           <tr>
+            <th>S.NO</th>
             {csvData.length > 0 && Object.keys(csvData[0]).map((key, index) => (
               <th key={index}>{key}</th>
               ))}
