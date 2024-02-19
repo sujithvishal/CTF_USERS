@@ -57,6 +57,11 @@ label{
   background-color: #f2f2f2;
 }
 
+.count{
+  color:green;
+
+}
+
 /* Media Queries for Responsive Design */
 
 /* @media only screen and (max-width: 600px) {

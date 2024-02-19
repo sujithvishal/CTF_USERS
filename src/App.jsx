@@ -7,6 +7,8 @@ function App() {
   const [csvData, setCsvData] = useState([]);
   const [searchText, setSearchText] = useState('');
   const [filterByCredit, setFilterByCredit] = useState(false);
+  // const [count,setCount]=useState(0)
+  let count=0;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +37,8 @@ function App() {
     const containsCredit = rowValues.indexOf('true') !== -1;
     return (!filterByCredit || containsCredit) && containsSearchText;
   });
+  // setCount(filteredData.length);
+  count= filteredData.length;
 
   return (
     <div className="app-container">
@@ -45,6 +49,7 @@ function App() {
           <input type="checkbox" checked={filterByCredit} onChange={handleFilterByCredit} />
           Filter by Paid
         </label>
+        <h2 class='count'>count: {count}</h2>
       </div>
       <div className="styled-table-container">
 
