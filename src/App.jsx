@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://api.kurukshetraceg.org.in/api/v1/admin/get-workshops-registrations?user=workshops&access=tonystarkwasabletobuildthisinacave');
+        const response = await axios.get('https://api.kurukshetraceg.org.in/api/v1/admin/get-kusers?user=admin&access=thepowerofthesuninthepalmofmyhand');
         const csvData = await csvtojson().fromString(response.data);
         setCsvData(csvData);
       } catch (error) {
